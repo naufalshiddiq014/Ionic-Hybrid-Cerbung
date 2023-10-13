@@ -10,27 +10,30 @@
             <ion-title size="large">Home</ion-title>
         </ion-toolbar>
     </ion-header>
-    <ion-card>
-        <ion-img
-            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80">
-        </ion-img>
-        <ion-card-title>
-            Rahasia Terkunci di perpustakaan kuno
-        </ion-card-title>
-        <ion-card-subtitle>
-            by Nebula Nomad
-        </ion-card-subtitle>
-        <ion-button fill="clear">
-            <ion-icon name="list" aria-hidden="true"></ion-icon>
-        </ion-button>
-        <ion-button fill="clear">
-            <ion-icon name="thumbs-up-outline" aria-hidden="true"></ion-icon>
-        </ion-button>
-        <p>
-            a';sdflj;sdljkhfskdjfhkjsdhfkjsd hfjksdhf;laksjf;lkjdashfkjdsfalkdfhj;alkhfjsasdasdasdasdasdas
-        </p>
-        <p>adaswqd</p>
-        <p>
+    <div>
+        <ion-card *ngFor="let cerbung of cerbung">
+            <ion-img
+                [src]="cerbung.url">
+            </ion-img>
+            <ion-card-title>
+                {{cerbung.title}}
+            </ion-card-title>
+            <!-- <ion-card-subtitle>
+                by Nebula Nomad
+            </ion-card-subtitle> -->
+            <ion-button fill="clear">
+                <ion-icon name="list" aria-hidden="true"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear">
+                <ion-icon name="thumbs-up-outline" aria-hidden="true"></ion-icon>
+            </ion-button>
+            <!-- <p>
+                a';sdflj;sdljkhfskdjfhkjsdhfkjsd hfjksdhf;laksjf;lkjdashfkjdsfalkdfhj;alkhfjsasdasdasdasdasdas
+            </p>
+            <p>adaswqd</p>
+            <p> -->
+            <ion-item>{{cerbung.description}}</ion-item>
             <ion-button color="tertiary">Read</ion-button>
-    </ion-card>
+        </ion-card>
+    </div>
 </ion-content>

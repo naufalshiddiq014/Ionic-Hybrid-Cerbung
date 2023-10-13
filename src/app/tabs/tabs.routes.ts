@@ -17,7 +17,7 @@ export const routes: Routes = [
           import('../pages/following/following.page').then((m) => m.FollowingPage),
       },
       {
-        path: 'create',
+        path: 'create-cerbung',
         loadComponent: () =>
           import('../pages/create-cerbung/create-cerbung.page').then((m) => m.CreateCerbungPage),
       },
@@ -30,6 +30,14 @@ export const routes: Routes = [
         path: 'prefs',
         loadComponent: () =>
           import('../pages/preferences/preferences.page').then((m) => m.PreferencesPage),
+      },
+      {
+        path: 'create-cerbung2',
+        loadComponent: () => import('../pages/create-cerbung2/create-cerbung2.page').then( m => m.CreateCerbung2Page)
+      },
+      {
+        path: 'create-cerbung3',
+        loadComponent: () => import('../pages/create-cerbung3/create-cerbung3.page').then( m => m.CreateCerbung3Page)
       },
       {
         path: '',

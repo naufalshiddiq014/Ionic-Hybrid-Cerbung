@@ -10,4 +10,25 @@
       <ion-title size="large">signup-page</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input [(ngModel)]="username" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Profile Picture URL</ion-label>
+    <ion-input [(ngModel)]="url" type="url"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Confirm Password</ion-label>
+    <ion-input [(ngModel)]="confirmPassword" type="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="signup()">Submit</ion-button>
 </ion-content>
